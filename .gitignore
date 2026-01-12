@@ -3,4 +3,4 @@ cypress/fixtures/credentials.json
 .vscode/
 cypress/reports/
 .env
-
+cypress/screenshots/

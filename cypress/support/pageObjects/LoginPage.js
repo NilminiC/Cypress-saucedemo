@@ -1,6 +1,6 @@
 class LoginPage {
   visit() {
-    cy.visit("/"); 
+    cy.visit(Cypress.env('BASE_URL'));
   }
 
   login(username, password) {
