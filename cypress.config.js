@@ -1,19 +1,18 @@
 const { defineConfig } = require("cypress");
+require("dotenv").config(); 
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: process.env.BASE_URL || 'https://www.saucedemo.com',
+    baseUrl: process.env.BASE_URL, 
     setupNodeEvents(on, config) {
-      config.env.username = process.env.USERNAME || 'standard_user';
-      config.env.password = process.env.PASSWORD || 'secret_sauce';
       return config;
     },
     reporter: "mochawesome",
     reporterOptions: {
       reportDir: "cypress/reports",
-      overwrite: false,
       html: true,
-      json: true
+      json: true,
+      overwrite: false
     }
-  },
+  }
 });
