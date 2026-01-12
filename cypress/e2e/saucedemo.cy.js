@@ -11,7 +11,7 @@ describe('SauceDemo E2E Test', () => {
       InventoryPage.addFirstItemToCart();
       InventoryPage.assertCartCount(1);
 
-      cy.log('✅ All checks done. Test complete.');
+      cy.log('All checks done. Test complete.');
     });
   });
 });
